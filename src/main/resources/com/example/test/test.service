@@ -1,0 +1,14 @@
+[Unit]
+Description=Test Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/usr/local/Test
+ExecStart=/usr/bin/java -Djavafx.platform=monocle -jar /usr/local/Test/Test-1.0-SNAPSHOT-jar-with-dependencies.jar
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

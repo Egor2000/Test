@@ -1,0 +1,16 @@
+name: test
+version: 1.0.0
+release: 1
+summary: Проект Test
+license: 1
+url: 1
+buildarch: x86_64
+requires:
+  - java-11-openjdk
+files:
+  - /usr/local/Test/config.yml
+  - /usr/local/Test/Test-1.0-SNAPSHOT-jar-with-dependencies.jar
+  - /usr/local/Test/backend.sh
+scripts:
+  preinstall: /usr/local/Test/preinstall.sh
+  postinstall: /usr/local/Test/postinstall.sh
